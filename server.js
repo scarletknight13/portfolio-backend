@@ -2,12 +2,13 @@ const express = require('express');
 const cors = require('cors');
 
 const projects = require('./projects.json');
-const about = require('./projects.json');
+const about = require('./about.json');
 const app = express();
 
 const PORT = process.env.PORT || 4000
 
 app.use(cors());
+app.use(express.json())
 app.get('/', (req, res) =>{
     res.send('Hello World')
 })
